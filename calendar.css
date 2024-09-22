@@ -1,0 +1,64 @@
+:root {
+    --calendar-border-color: #ccc;
+    --calendar-day-width: 14.8%;
+    --calendar-day-height: 100px;
+    --calendar-day-not-current-bg: #efefef;
+    --font-family: Arial;
+}
+
+.calendar * {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+.calendar-week-container {
+    display: flex;
+    gap: 0;
+}
+
+.calendar-days-container {
+    display: flex;
+    gap: 0;
+    flex-flow: column;
+}
+
+.calendar-day {
+    border: 1px solid var(--calendar-border-color);
+    width: var(--calendar-day-width);
+    height: var(--calendar-day-height);
+    padding: 10px;
+}
+
+.calendar-day.calendar-today .calendar-day-number {
+    background: brown;
+    padding:8px 13px;
+    color: white;
+    border-radius: 50%;
+}
+
+.calendar-day.not-current-month {
+    opacity: 0.5;
+    background: var(--calendar-day-not-current-bg);
+}
+
+.calendar-day-label {
+    width: var(--calendar-day-width);
+    border: 1px solid var(--calendar-border-color);
+    padding: 10px;
+}
+
+.calendar-day-labels-container {
+    display: flex;
+    gap: 0;
+}
+
+.calendar-options {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.calendar-month-current-label {
+    width: 200px;
+    text-align: center;
+}

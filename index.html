@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+    <div class="calendar"></div>
+    <script type="module">
+        import Calendar from "./app/calendar.js";
+        import CalendarDate from "./app/calendarDate.js";
+
+        var calendar = new Calendar({
+            canvas : document.querySelector('.calendar'),
+            date : CalendarDate.Current()
+        });
+        calendar.render();
+        console.log(calendar);
+    </script>
+</body>
+</html>
